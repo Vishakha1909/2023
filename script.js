@@ -3,8 +3,9 @@ var userContent = {
     namoshi: {
         greetMessage: 'Heyyy Nemo!!',
         media: [
-          { type: 'image', src: 'image2.jpg' },
-          { type: 'video', src: 'video2.mp4' },
+          { type: 'image', src: 'namoshi/1.jpg' },
+          { type: 'image', src: 'namoshi/2.jpg' },
+          { type: 'image', src: 'namoshi/3.jpg' }
         ],
         paragraph: '',
       },
@@ -38,6 +39,10 @@ var userContent = {
           { type: 'image', src: 'ro/1.jpg' },
           { type: 'image', src: 'ro/2.jpg' },
           { type: 'image', src: 'ro/3.jpg' },
+          { type: 'image', src: 'ro/4.jpg' },
+          { type: 'image', src: 'ro/5.png' },
+          { type: 'image', src: 'ro/6.png' },
+          { type: 'image', src: 'ro/7.png' },
           { type: 'video', src: 'video2.mp4' },
         ],
         paragraph: '',
@@ -60,8 +65,24 @@ var userContent = {
       },
   };
   
+  var nameDropdown = document.getElementById('nameDropdown');
+  var passwordField = document.getElementById('passwordField');
+  var authenticatedContent = document.getElementById('authenticatedContent');
+  var greetMessage = document.getElementById('greetMessage');
+  var gallery = document.getElementById('gallery');
+  var userParagraph = document.getElementById('userParagraph');
+
+  // Event listener for dropdown change
+  nameDropdown.addEventListener('change', function () {
+    showPasswordField();
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    submitForm();
+  });
+
   function showPasswordField() {
-    var passwordField = document.getElementById('passwordField');
     passwordField.style.display = 'block';
   }
   
@@ -97,32 +118,65 @@ var userContent = {
     }
   }
   
+  // Function to open the modal
+  function openModal(content) {
+    var modal = document.getElementById('myModal');
+    var modalContent = document.getElementById('modalContent');
+    var closeBtn = document.getElementById('closeBtn');
+
+    // Set content inside the modal
+    modalContent.innerHTML = content;
+
+    // Display the modal
+    modal.style.display = 'flex';
+
+    // Close modal when clicking outside the modal content
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    // Close modal when clicking the close button
+    closeBtn.onclick = closeModal;
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+
+  // Function to load the gallery based on media content
   function loadGallery(media) {
-    var galleryContainer = document.getElementById('gallery');
-    galleryContainer.innerHTML = '';
-  
-    media.forEach(function (item) {
+    gallery.innerHTML = ''; // Clear existing content
+
+    media.forEach(function (item, index) {
       var galleryItem = document.createElement('div');
       galleryItem.className = 'gallery-item';
-  
+
       if (item.type === 'image') {
         var imageElement = document.createElement('img');
-        imageElement.width = 100;
         imageElement.src = item.src;
         imageElement.alt = 'Gallery Image';
         galleryItem.appendChild(imageElement);
+
+        // Open the image in a popup on click
+        imageElement.addEventListener('click', function () {
+          openModal(`<img src="${item.src}" alt="Gallery Image">`);
+        });
       } else if (item.type === 'video') {
         var videoElement = document.createElement('video');
         videoElement.src = item.src;
         videoElement.controls = true;
         galleryItem.appendChild(videoElement);
+
+        // Open the video in a popup on click
+        videoElement.addEventListener('click', function () {
+          openModal(`<video src="${item.src}" controls></video>`);
+        });
       }
-  
-      galleryContainer.appendChild(galleryItem);
+
+      gallery.appendChild(galleryItem);
     });
   }
-  
-  function submitForm() {
-    alert('');
-  }
-  

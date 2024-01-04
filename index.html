@@ -17,14 +17,14 @@
       <label for="nameDropdown">Are you here?</label>
       <select id="nameDropdown" onchange="showPasswordField()">
         <option value="" disabled selected>Check for yourself</option>
-        <option value="mom">Mom</option>
-        <option value="pari">Pari</option>
+        <!--<option value="mom">Mom</option>-->
+        <!--<option value="pari">Pari</option>-->
         <option value="namoshi">Namoshi</option>
         <option value="snigdha">Snigdha</option>
         <option value="sanika">Sanika</option>
         <option value="ro">Ro</option>
         <option value="rohan">Rohan</option>
-        <option value="fam">2J36</option>
+        <!--<option value="fam">2J36</option>-->
       </select>
 
       <div id="passwordField" class="password-field">
@@ -48,10 +48,14 @@
         <label for="name">Name: (ik again i'm asking again but yeah)</label>
         <input type="text" id="name" placeholder="Your Name" required>
 
-        <label for="friend">S</label>
+        <label for="friend">What am i to you? (friend/good friend/close friend/best friend?/family)</label>
         <input type="text" id="friend">
 
+        <label for="like">3 things you like about me (atleast 1 i hope)</label>
+        <textarea id="dislike" rows="4" cols="50"></textarea><br>
 
+        <label for="dislike">3 things you dislike about me (none of them are good enough?)</label>
+        <textarea id="dislike" rows="4" cols="50"></textarea><br>
 
         <label for="message">Message:</label>
         <textarea id="message" placeholder="Your Message" required></textarea>
@@ -60,7 +64,13 @@
       </form>
     </div>
   </main>
-
+  <!-- Add this modal HTML at the end of your body tag -->
+<div id="myModal" class="modal">
+  <div id="modalContent" class="modal-content"></div>
+  <span id="closeBtn" class="close">&times;</span>
+</div>
   <script src="script.js"></script>
 </body>
+
+
 </html>
