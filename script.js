@@ -31,24 +31,22 @@ var userContent = {
     snigdha: {
       greetMessage: 'Heyyy Snigdha!',
       media: [
-        { type: 'image', src: 'snigdha/image1.jpg' },
-        { type: 'video', src: 'video1.mp4' },
+        { type: 'image', src: 'snigdha/1.jpg' },
       ],
       paragraph: '',
     },
     sanika: {
       greetMessage: 'Heyyy Sanika Di!',
       media: [
-        { type: 'image', src: 'image2.jpg' },
-        { type: 'video', src: 'video2.mp4' },
+        { type: 'image', src: 'sanika/1.jpg' },
+        { type: 'image', src: 'sanika/2.jpg' },
       ],
       paragraph: '',
     },
     mona: {
         greetMessage: 'Yoo Mona!',
         media: [
-          { type: 'image', src: 'image2.jpg' },
-          { type: 'video', src: 'video2.mp4' },
+          { type: 'image', src: 'mona.jpg' },
         ],
         paragraph: '',
       },
@@ -62,10 +60,11 @@ var userContent = {
           { type: 'image', src: 'ro/5.png' },
           { type: 'image', src: 'ro/6.png' },
           { type: 'image', src: 'ro/7.png' },
+          { type: 'image', src: 'ro/8.png' },
           { type: 'video', src: 'ro/v1.mp4'},
           
         ],
-        paragraph: '',
+        paragraph: 'Hey! I cant deny that you are probably the best person who came into my life from this year so its a rather long appreciation, you might find it lame/cringe but i love doing this. Crazy how it all started with random show/movie recommendations to how "close" we are now i can say. I have always enjoyed every single call with you and watching all the stuff we have together while managing our timezone differences so well. Avatar, Stranger Things, AOT and like so so much more lol (i will wait to finish GOT with you). Nothing can be better than the music you got me into as well be it hard techno or hardstyle/hardcore stuff too, you showed me worlds i didnt know existed (it was just me and my bollywood before lol, india moment) and i am grateful for that. Still hoping on attending Verknipt with you one fine day (down for amsterdam anytime). Not to forget all the endshows you patiently showed and explained to me and made insane curated playlists. Our watchpubs history is crazy i bet. We have spent so much time together this year and thats let me be open, real and vulnerabale because of chill you are its just easy & comfortable with you, and im glad you have also opened up to me many times. At the same time, i know i have annoyed you quite a bit so im sorry for that lol but thanks for still sticking around. I have had multiple "first" experiences because of you lol, and i enjoyed it all (me with your balls haha :sideeye: ~ WHYBE not so outie). You will always be up there in my priority list and you can always rely on me for anything, I respect and understand you a lot and you know i dont judge or anything. Aight too much to read i know lol. Heres to another epic year ahead, gotta get you to code and shit, lets watch more cool stuff and hang soon please ty. And hope to meet you soon when i move there! Also not to forget, you have a really nice voice haha. Chalo, ok love you cya bye mr all natural.',
       },
     rohan: {
         greetMessage: 'Helloo Rohan',
@@ -78,7 +77,8 @@ var userContent = {
     amazon: {
         greetMessage: 'Helloo Abhirupa, Adarsh, Durgesh, Mradul & Saloni!',
         media: [
-          { type: 'image', src: 'image2.jpg' },
+          { type: 'image', src: 'amazon/1.jpg' },
+          { type: 'image', src: 'amazon/2.jpg' },
           { type: 'video', src: 'video2.mp4' },
         ],
         paragraph: '',
