@@ -4,17 +4,37 @@ body {
   padding: 0;
   background-color: #d2e3c8; /* Lightest green */
   color: #4f6f52; /* Darkest green */
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
   background-color: #152e17; /* Medium green */
-  color: #d2e3c8; /* Lightest green */
+  color: #eff1ee; /* Lightest green */
   text-align: center;
   padding: 20px;
 }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
+body.scrolled header {
+  background-color: #86a789; /* Light green */
+}
+.intro-section {
+  background-color: #86a789; /* Light green */
+  color: #fff; /* White text */
+  text-shadow: 1px 1px #0d0c0c;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
 main {
   padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .container {
@@ -25,7 +45,8 @@ main {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #739072; /* Medium green */
+  font-weight: bold;
+  color: #344934; /* Medium green */
 }
 
 select, input, button {
@@ -41,6 +62,7 @@ button {
   background-color: #4f6f52; /* Darkest green */
   color: #d2e3c8; /* Lightest green */
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
@@ -73,15 +95,67 @@ button:hover {
   height: auto; /* Maintain aspect ratio */
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
+.alert {
+  width: 100%;
+  background-color: #18f32b;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: #152e17;
+  display: none;
 }
 
-.contact-form label,
-.contact-form textarea,
-.contact-form button {
+.greet {
+  font-size: larger;
+}
+
+.formheading {
+
+}
+
+/* Improved form styling */
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4f6f52; /* Darkest green */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 15px;
+  border: 1px solid #86a789; /* Light green */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #739072; /* Medium green */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #86a789; /* Light green */
 }
 
 /* Modal styles (unchanged from previous) */

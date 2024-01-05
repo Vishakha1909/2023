@@ -1,4 +1,23 @@
 // Define user content
+var body = document.body;
+
+  // Function to handle scroll events
+  function handleScroll() {
+    var scrollY = window.scrollY;
+
+    // Add 'scrolled' class to body if scrolled down, remove it otherwise
+    if (scrollY > 0) {
+      body.classList.add('scrolled');
+    } else {
+      body.classList.remove('scrolled');
+    }
+  }
+
+  // Listen for scroll events
+  window.addEventListener('scroll', handleScroll);
+
+  // Initial check for scroll position
+  handleScroll();
 var userContent = {
     namoshi: {
         greetMessage: 'Heyyy Nemo!!',
@@ -43,7 +62,8 @@ var userContent = {
           { type: 'image', src: 'ro/5.png' },
           { type: 'image', src: 'ro/6.png' },
           { type: 'image', src: 'ro/7.png' },
-          { type: 'video', src: 'video2.mp4' },
+          { type: 'video', src: 'ro/v1.mp4'},
+          
         ],
         paragraph: '',
       },
@@ -75,11 +95,6 @@ var userContent = {
   // Event listener for dropdown change
   nameDropdown.addEventListener('change', function () {
     showPasswordField();
-  });
-
-  document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-    submitForm();
   });
 
   function showPasswordField() {

@@ -10,7 +10,16 @@
 
   <header>
     <h1>shy's 2023</h1>
+    <h6>(some personal reflections and appreciations)</h4>
   </header> 
+  <section class="intro-section">
+    <div class="container">
+      <p>Heyyy! First of all, if you are seeing this, consider yourself very lucky and welcome to my inner circle. This is my usual yearly reflection which most of you know of anyway but this time its just done as a website. 
+        And since you guys made it one insane year for me in many ways, so its only fair for me to appreciate ya'll for it! Starting from the best 6 months away from home in Hyderabad, to a wholesome stay back home to finally moving out to Pune. 
+        You all have been with me through all of that. So pick your name, I sent you the secret code (I hope) and yeah we'll take it from there :)
+      Here's to a crazier year ahead! Love you all 💖 ~ shy</p>
+    </div>
+  </section>
 
   <main>
     <div class="container">
@@ -33,43 +42,46 @@
         <button onclick="authenticate()">Works?</button>
       </div>
     </div>
-
     <div id="authenticatedContent" class="authenticated-content">
-      <h2 id="greetMessage"></h2>
-
+      <hr style="width: 100%; height:2px;border-width:0;color:gray;background-color:gray">
+    <hr style="width: 100%; height:2px;border-width:0;color:gray;background-color:gray">
+      <h1 id="greetMessage" class="greet"></h1>
+      <p id="userParagraph"></p>
       <div id="gallery" class="gallery"></div>
 
-      <p id="userParagraph"></p>
 
       <br>
-
-      <form action="#" method="post" onsubmit="submitForm()" class="contact-form">
-
-        <label for="name">Name: (ik again i'm asking again but yeah)</label>
+      <hr style="width: 100%; height:2px;border-width:0;color:gray;background-color:gray">
+      <hr style="width: 100%; height:2px;border-width:0;color:gray;background-color:gray">
+      
+      <form action="#" method="post" onsubmit="submitForm()" id="contact-form" class="contact-form">
+        <div class="formheading">
+          <h2>Reflection</h2>
+        </div>
+       
+        <div class="alert">Your message has been sent! Thanks for taking out the time!</div>
+        <br>
+        <label for="name">Name: (ik its redundant to ask again but yeah)</label>
         <input type="text" id="name" placeholder="Your Name" required>
 
-        <label for="friend">What am i to you? (friend/good friend/close friend/best friend?/family)</label>
+        <label for="friend">What am I to you? (good/close/best friend? or family etc.)</label>
         <input type="text" id="friend">
 
-        <label for="like">3 things you like about me (atleast 1 i hope)</label>
-        <textarea id="dislike" rows="4" cols="50"></textarea><br>
-
-        <label for="dislike">3 things you dislike about me (none of them are good enough?)</label>
-        <textarea id="dislike" rows="4" cols="50"></textarea><br>
-
-        <label for="message">Message:</label>
+        <label for="message">Tell me anything, include something you like about about me, something you hate about me and just any lil message.</label>
         <textarea id="message" placeholder="Your Message" required></textarea>
 
         <button type="submit">Submit</button>
       </form>
     </div>
   </main>
-  <!-- Add this modal HTML at the end of your body tag -->
+
 <div id="myModal" class="modal">
   <div id="modalContent" class="modal-content"></div>
   <span id="closeBtn" class="close">&times;</span>
 </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
   <script src="script.js"></script>
+  <script src="fire.js"></script>
 </body>
 
 
