@@ -83,6 +83,24 @@ var userContent = {
         ],
         paragraph: '',
       },
+    mom: {
+        greetMessage: 'Hi Mom!',
+        media: [
+          { type: 'image', src: 'mom/1.jpg' },
+          { type: 'image', src: 'mom/2.jpg' },
+          { type: 'image', src: 'mom/3.jpg' },
+        ],
+        paragraph: 'Hiii! I love you first of all! It was a crazy year for us, we were apart physically more than ever but thats only made us emotionally closer i feel. ive annoyed you so much lol but thnks for sticking by me. i will always wonder if you reallyyyyyy love me or not because i dont deserve all of that. I hope to make you more proud this year. Stop worrying about me too much, you have raised me well, trust yourself. Help me out whenever i ask, dont care if mama says not to. miss you. i will try to  listen to your advice more i guess. ok too much appreciation now bye bye.',
+      },
+    pari: {
+        greetMessage: 'Helloo Paruuuu!',
+        media: [
+          { type: 'image', src: 'amazon/1.jpg' },
+          { type: 'image', src: 'amazon/2.jpg' },
+          { type: 'video', src: 'video2.mp4' },
+        ],
+        paragraph: '',
+      },
   };
   
   var nameDropdown = document.getElementById('nameDropdown');
@@ -113,7 +131,9 @@ var userContent = {
       mona: 'takemetoaustralia',
       ro: 'dingus',
       rohan: 'poda',
-      amazon: 'hellyeah'
+      amazon: 'hellyeah',
+      mom: 'chenno',
+      pari: 'bruh'
     };
   
     if (userPasswords[selectedName] && password === userPasswords[selectedName]) {
