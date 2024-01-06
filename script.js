@@ -41,7 +41,7 @@ var userContent = {
         { type: 'image', src: 'sanika/1.jpg' },
         { type: 'image', src: 'sanika/2.jpg' },
       ],
-      paragraph: '',
+      paragraph: 'Heyy di, happy new year first of all! Just wanted to appreciate you for being there for me through all the tough times i went through. You know it all, i was so alone and everyhting and you have alwaays supporte me to the best of your abilities even from so far away. You will always be a very very important person to me adn im always here for you anytime for anything. love you loads, lets hope to meet each other more this year and have all those crzy food we keep planning on haha!',
     },
     mona: {
         greetMessage: 'Yoo Mona!',
@@ -127,7 +127,7 @@ var userContent = {
     var userPasswords = {
       namoshi: 'italytripwhen?',
       snigdha: 'motoliya',
-      sanika: 'temp',
+      sanika: 'mumbaikirani',
       mona: 'takemetoaustralia',
       ro: 'dingus',
       rohan: 'poda',
